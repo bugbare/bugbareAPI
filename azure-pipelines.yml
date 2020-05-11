@@ -31,8 +31,6 @@ steps:
 
 - task: Maven@3
   inputs:
-- task: Maven@3
-  inputs:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
