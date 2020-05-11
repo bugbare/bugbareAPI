@@ -12,7 +12,7 @@ variables:
   azureSubscription: '0bf91840-ebeb-476a-9a04-4c985618b43f'
   
   # Web app name
-  webAppName: 'bugbareAPI'
+  webAppName: 'bugbareAPIv1'
 
   # Environment name
   environmentName: 'bugbareAPI'
