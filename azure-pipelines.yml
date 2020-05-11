@@ -16,7 +16,7 @@ strategy:
   maxParallel: 3
 
 pool:
-  vmImage: $(imageName)
+  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.14', 'vs2017-win2016' $(imageName)
 
 steps:
 
@@ -29,7 +29,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
     
-- task: Maven@3
+- task: Maven@1
   inputs:
     mavenPomFile: 'pom.xml'
     javaHomeOption: 'JDKVersion'
@@ -41,7 +41,7 @@ steps:
     jdkArchitectureOption: 'x64'
     goals: 'package'
     
-- task: PublishCodeCoverageResults@1
+- task: PublishCodeCoverageResults@2
   inputs:
     failIfCoverageEmpty: false
     sonarQubeRunAnalysis: true
