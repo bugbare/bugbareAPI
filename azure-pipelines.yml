@@ -43,12 +43,7 @@ steps:
     
 - task: PublishCodeCoverageResults@1
   inputs:
-    codeCoverageTool: "JaCoCo"
-    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
-    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
-    failIfCoverageEmpty: true
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    failIfCoverageEmpty: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
     checkStyleRunAnalysis: true
