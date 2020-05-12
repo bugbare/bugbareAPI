@@ -43,26 +43,26 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		Manager bugbare = this.managers.save(new Manager("bugbare", "bugbare",
+		Manager manager1 = this.managers.save(new Manager("manager1", "manager1",
 							"ROLE_MANAGER"));
-		Manager lionel = this.managers.save(new Manager("lionel", "lionelrishi",
+		Manager manager2 = this.managers.save(new Manager("manager2", "manager2",
 							"ROLE_MANAGER"));
 
 		SecurityContextHolder.getContext().setAuthentication(
-			new UsernamePasswordAuthenticationToken("bugbare", "doesn't matter",
+			new UsernamePasswordAuthenticationToken("manager1", "doesn't matter",
 				AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
 
-		this.employees.save(new Employee("Frodo", "Baggins", "ring bearer", bugbare));
-		this.employees.save(new Employee("Bilbo", "Baggins", "burglar", bugbare));
-		this.employees.save(new Employee("Gandalf", "the Grey", "wizard", bugbare));
+		this.employees.save(new Employee("Frodo", "Baggins", "ring bearer", manager1));
+		this.employees.save(new Employee("Bilbo", "Baggins", "burglar", manager1));
+		this.employees.save(new Employee("Gandalf", "the Grey", "wizard", manager1));
 
 		SecurityContextHolder.getContext().setAuthentication(
-			new UsernamePasswordAuthenticationToken("lionel", "doesn't matter",
+			new UsernamePasswordAuthenticationToken("manager2", "doesn't matter",
 				AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
 
-		this.employees.save(new Employee("Samwise", "Gamgee", "gardener", lionel));
-		this.employees.save(new Employee("Merry", "Brandybuck", "pony rider", lionel));
-		this.employees.save(new Employee("Peregrin", "Took", "pipe smoker", lionel));
+		this.employees.save(new Employee("Samwise", "Gamgee", "gardener", manager2));
+		this.employees.save(new Employee("Merry", "Brandybuck", "pony rider", manager2));
+		this.employees.save(new Employee("Peregrin", "Took", "pipe smoker", manager2));
 
 		SecurityContextHolder.clearContext();
 	}
