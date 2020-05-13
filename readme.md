@@ -1,0 +1,1 @@
+[![Build Status](https://bugbare.visualstudio.com/bugbareAPI/_apis/build/status/bugbare.bugbareAPI?branchName=master)](https://bugbare.visualstudio.com/bugbareAPI/_build/latest?definitionId=5&branchName=master)
