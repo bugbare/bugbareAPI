@@ -58,8 +58,31 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured-common</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
 			<version>4.3.0</version>
 			<scope>test</scope>
 		</dependency>
@@ -67,6 +90,11 @@
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest</artifactId>
 			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>name.remal.tools.test</groupId>
+			<artifactId>junit5</artifactId>
+			<version>1.26.147</version>
 		</dependency>
 	</dependencies>
 
@@ -81,6 +109,8 @@
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
 			</plugin>
+
+
 		</plugins>
 	</build>
 
